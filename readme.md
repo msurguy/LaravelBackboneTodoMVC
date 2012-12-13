@@ -1,6 +1,7 @@
 # [TodoMVC](http://addyosmani.github.com/todomvc/) with [Laravel](http://laravel.com) PHP framework as backend.
 
-Working demo at laraveltodos.pagodabox.com
+Working demo at http://laraveltodos.pagodabox.com
+
 Also a secure version avaiable at http://laraveltodossecure.pagodabox.com/ 
 The source code for the secure version is in this repo, in SECURE branch. 
  
