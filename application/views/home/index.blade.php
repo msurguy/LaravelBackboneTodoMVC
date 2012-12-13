@@ -8,7 +8,9 @@
 	{{ HTML::style('css/style.css') }}
 </head>
 <body>
+	<p id="logout">{{ HTML::link_to_action('home@logout', 'Logout') }}</p>
 	<section id="todoapp">
+
 		<header id="header">
 			<h1>Laravel todos</h1>
 			<input id="new-todo" placeholder="What needs to be done?" autofocus>
@@ -48,6 +50,7 @@
 				<a href="#/completed">Completed</a>
 			</li>
 		</ul>
+
 		<% if (completed) { %>
 		<button id="clear-completed">Clear completed (<%= completed %>)</button>
 		<% } %>
