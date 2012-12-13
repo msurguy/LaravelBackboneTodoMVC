@@ -1,67 +1,15 @@
-# [Laravel](http://laravel.com) - A PHP Framework For Web Artisans
+# [TodoMVC](http://addyosmani.github.com/todomvc/) with [Laravel](http://laravel.com) PHP framework as backend.
 
-Laravel is a clean and classy framework for PHP web development. Freeing you
-from spaghetti code, Laravel helps you create wonderful applications using
-simple, expressive syntax. Development should be a creative experience that you
-enjoy, not something that is painful. Enjoy the fresh air.
+Working demo at laraveltodos.pagodabox.com
 
-[Official Website & Documentation](http://laravel.com)
+Full Integration + API Tutorial at my blog (http://maxoffsky.com/maxoffsky-blog/building-restful-api-in-laravel-part-3-integration-with-backbonejs/)
 
 ## Feature Overview
 
-- Simple routing using Closures or controllers.
-- Views and templating.
-- Driver based session and cache handling.
-- Database abstraction with query builder.
-- Authentication.
-- Migrations.
-- PHPUnit Integration.
-- A lot more.
+- Has a simple API consisting of ONE route and ONE controller to manage todos.
+- Has view templates that look just like TodoMVC example
+- Users can save, edit and delete todos.
 
-## A Few Examples
-
-### Hello World:
-
-```php
-<?php
-
-Route::get('/', function()
-{
-	return "Hello World!";
-});
-```
-
-### Passing Data To Views:
-
-```php
-<?php
-
-Route::get('user/(:num)', function($id)
-{
-	$user = DB::table('users')->find($id);
-
-	return View::make('profile')->with('user', $user);
-});
-```
-
-### Redirecting & Flashing Data To The Session:
-
-```php
-<?php
-
-return Redirect::to('profile')->with('message', 'Welcome Back!');
-```
-
-## Contributing to Laravel
-
-Contributions are encouraged and welcome; however, please review the Developer
-Certificate of Origin in the "license.txt" file included in the repository. All
-commits must be signed off using the `-s` switch.
-
-```bash
-git commit -s -m "this commit will be signed off automatically!"
-```
 
 ## License
-
-Laravel is open-sourced software licensed under the MIT License.
+Code is open-sourced software licensed under the MIT License.
