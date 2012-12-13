@@ -12,4 +12,8 @@ Full Integration + API Tutorial at my blog (http://maxoffsky.com/maxoffsky-blog/
 
 
 ## License
+<<<<<<< HEAD
 Code is open-sourced software licensed under the MIT License.
+=======
+Code is open-sourced software licensed under the MIT License.
+>>>>>>> fe2d6bf8d38c27331cb17e07fd0bc1f622471daf
