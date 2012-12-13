@@ -19,9 +19,10 @@
          }
          return $this->get_attribute('updated_at');
       }*/
-/*   public function user(){
-      return $this -> belongs_to('User');
-   }*/
+   public function user(){
+      return $this->belongs_to('User');
+   }
+   
    }
 
 ?>

@@ -37,6 +37,8 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
+Route::controller('home');
+
 Route::any('api/v1/todos/(:num?)', array('as' => 'api.todos', 'uses' => 'api.todos@index'));
 
 /*
@@ -109,5 +111,5 @@ Route::filter('csrf', function()
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::to('login');
+	if (Auth::guest()) return Redirect::to_action('home@login');
 });

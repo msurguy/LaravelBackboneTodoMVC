@@ -4,6 +4,10 @@ class Api_Todos_Controller extends Base_Controller {
 
 	public $restful = true;
 
+	public function __construct(){
+		$this->filter('before', 'auth');
+	}
+
 	public $rules = array(
 	        'title' => 'required'
 	);
@@ -12,7 +16,7 @@ class Api_Todos_Controller extends Base_Controller {
 	{
 		if (is_null($id )) 
 		{
-			return Response::eloquent(Todo::all());
+			return Response::eloquent(Auth::user()->todos);
 		} 
 		else 
 		{
@@ -40,6 +44,7 @@ class Api_Todos_Controller extends Base_Controller {
 
 			$todo = new Todo();
 
+			$todo->user_id = Auth::user()->id;
 			$todo->title = $newtodo->title;
 			$todo->completed = $newtodo->completed;
 
@@ -75,6 +80,10 @@ class Api_Todos_Controller extends Base_Controller {
     public function delete_index($id = null) 
     {
 		$todo = Todo::find($id);
+
+		if($todo->user_id != Auth::user()->id){
+            return Response::json('You are not the owner of this todo', 404);
+		}
 
 		if(is_null($todo))
         {
